@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/INtools.iml" filepath="$PROJECT_DIR$/INtools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intools/intools.iml" filepath="$PROJECT_DIR$/intools/intools.iml" />
+    </modules>
+  </component>
+</project>
