@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/infonotarydev/INtools'
     gitUrl = 'https://github.com/infonotarydev/INtools.git'
 
-    libraryVersion = '0.3'
+    libraryVersion = '0.4'
 
     developerId = 'infonotarydev'
     developerName = 'Hristo Minchev'
