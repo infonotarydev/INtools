@@ -25,6 +25,11 @@ public class IOTools {
         return (new String(hexChars)).toLowerCase();
     }
 
+    public static int byteArrayToInt(byte[] bytes) {
+        String bytesHex = bytesToHex(bytes);
+        return Integer.parseInt(bytesHex, 16);
+    }
+
     public static byte[] hexToBytes(String digits) {
         digits = digits.replace(" ", "");
         final int bytes = digits.length() / 2;

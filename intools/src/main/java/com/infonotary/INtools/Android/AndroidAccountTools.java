@@ -42,7 +42,7 @@ public class AndroidAccountTools {
      */
     @TargetApi(Build.VERSION_CODES.FROYO)
     public static List<String> getAllAccounts(Context context) {
-        List<String> emails = new ArrayList<String>();
+        List<String> emails = new ArrayList<>();
         Pattern emailPattern = Patterns.EMAIL_ADDRESS;
         Account[] accounts = AccountManager.get(context).getAccounts();
         if (accounts.length > 0) {

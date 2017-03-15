@@ -47,7 +47,13 @@ public class IOMisc {
     }
 
     public static List<String> removeDuplicates(List<String> input) {
-        HashSet<String> listToSet = new HashSet<String>(input);
-        return new ArrayList<String>(listToSet);
+        HashSet<String> listToSet = new HashSet<>(input);
+        return new ArrayList<>(listToSet);
+    }
+
+    public static String generateRandom(int length) {
+        SecureRandomGenerator generator = SecureRandomGenerator.getInstance();
+        byte[] result = generator.getRand(length);
+        return new String(result);
     }
 }

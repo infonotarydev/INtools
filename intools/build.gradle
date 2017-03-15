@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/infonotarydev/INtools'
     gitUrl = 'https://github.com/infonotarydev/INtools.git'
 
-    libraryVersion = '0.5'
+    libraryVersion = '0.6'
 
     developerId = 'infonotarydev'
     developerName = 'Hristo Minchev'
@@ -25,14 +25,14 @@ ext {
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         minSdkVersion 1
-        targetSdkVersion 23
-        versionCode 5
-        versionName "0.5"
+        targetSdkVersion 25
+        versionCode 6
+        versionName "0.6"
     }
     buildTypes {
         release {
@@ -47,7 +47,9 @@ android {
 }
 
 dependencies {
-    compile 'com.madgag.spongycastle:core:1.54.0.0'
+    compile 'com.madgag:scprov-jdk15on:1.47.0.3'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'junit:junit:4.12'
 }
 
 apply from: '../install.gradle'
