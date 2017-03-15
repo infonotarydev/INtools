@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/infonotarydev/INtools'
     gitUrl = 'https://github.com/infonotarydev/INtools.git'
 
-    libraryVersion = '0.6'
+    libraryVersion = '0.7'
 
     developerId = 'infonotarydev'
     developerName = 'Hristo Minchev'
@@ -31,8 +31,8 @@ android {
     defaultConfig {
         minSdkVersion 1
         targetSdkVersion 25
-        versionCode 6
-        versionName "0.6"
+        versionCode 7
+        versionName "0.7"
     }
     buildTypes {
         release {
