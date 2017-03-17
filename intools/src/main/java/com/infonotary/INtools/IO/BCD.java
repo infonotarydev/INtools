@@ -3,8 +3,8 @@ package com.infonotary.INtools.IO;
 /**
  * Binary-coded decimal tools
  */
-class BCD {
-    static byte[] toBcd(String s) {
+public class BCD {
+    public static byte[] toBcd(String s) {
         int size = s.length();
         int byteLen = size % 2 == 0 ? size / 2 : (size + 1) / 2;
         byte[] bytes = new byte[byteLen];
@@ -22,7 +22,7 @@ class BCD {
         return bytes;
     }
 
-    static byte[] DecimalToBCD(long num) {
+    public static byte[] DecimalToBCD(long num) {
         int digits = 0;
 
         long temp = num;
@@ -60,7 +60,7 @@ class BCD {
         return Long.valueOf(BCD.BCDtoString(bcd));
     }
 
-    private static String BCDtoString(byte bcd) {
+    public static String BCDtoString(byte bcd) {
         StringBuilder sb = new StringBuilder();
 
         byte high = (byte) (bcd & 0xf0);
@@ -74,7 +74,7 @@ class BCD {
         return sb.toString();
     }
 
-    private static String BCDtoString(byte[] bcd) {
+    public static String BCDtoString(byte[] bcd) {
         StringBuilder sb = new StringBuilder();
 
         for (byte aBcd : bcd) {
@@ -84,7 +84,7 @@ class BCD {
         return sb.toString();
     }
 
-    private static String byteArrayToBinaryString(byte[] bytes) {
+    public static String byteArrayToBinaryString(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
         for (byte i : bytes) {
             String byteInBinary = String.format("%8s", Integer.toBinaryString(i)).replace(' ', '0');
