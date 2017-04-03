@@ -3,7 +3,7 @@ package com.infonotary.INtools.IO;
 import java.nio.ByteBuffer;
 
 public class IOTools {
-    static final char[] hexArray = "0123456789ABCDEF".toCharArray();
+    private static final char[] hexArray = "0123456789ABCDEF".toCharArray();
     public static String bytesToHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];
         int v;

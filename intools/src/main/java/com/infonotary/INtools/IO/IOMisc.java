@@ -51,9 +51,12 @@ public class IOMisc {
         return new ArrayList<>(listToSet);
     }
 
-    public static String generateRandom(int length) {
+    public static byte[] generateRandomBytes(int length) {
         SecureRandomGenerator generator = SecureRandomGenerator.getInstance();
-        byte[] result = generator.getRand(length);
-        return new String(result);
+        return generator.getRand(length);
+    }
+
+    public static String generateRandom(int length) {
+        return new String(generateRandomBytes(length));
     }
 }
