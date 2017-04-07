@@ -4,6 +4,7 @@ import java.nio.ByteBuffer;
 
 public class IOTools {
     private static final char[] hexArray = "0123456789ABCDEF".toCharArray();
+
     public static String bytesToHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];
         int v;
@@ -25,7 +26,7 @@ public class IOTools {
         return (new String(hexChars)).toLowerCase();
     }
 
-    public static int byteArrayToInt(byte[] bytes) {
+    public static int bytesToInt(byte[] bytes) {
         String bytesHex = bytesToHex(bytes);
         return Integer.parseInt(bytesHex, 16);
     }
@@ -73,5 +74,20 @@ public class IOTools {
             hex.append(Integer.toHexString(ascii.charAt(i)));
         }
         return hex.toString().toLowerCase();
+    }
+
+    public static String bytesToDecimalString(byte[] bytes) {
+        String rrnStr = "";
+        for (byte b : bytes) {
+            int x = (int) b;
+            x = x + 128;
+            x = x % 100;
+            String s = Integer.toString(x);
+            if (s.length() < 2) {
+                s = s + "0";
+            }
+            rrnStr += s;
+        }
+        return rrnStr;
     }
 }

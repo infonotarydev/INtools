@@ -20,4 +20,14 @@ public class SecureRandomGenerator {
         return rndBytes;
     }
 
+    /**
+     * Generates a random integer from 0 to the maximum specifies value
+     *
+     * @param maxValue Maximum value for the random number
+     * @return random number
+     */
+    public int getRandInt(int maxValue) {
+        return random.nextInt(maxValue);
+    }
+
 }
