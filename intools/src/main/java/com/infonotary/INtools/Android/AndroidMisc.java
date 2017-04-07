@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 
 public class AndroidMisc {
 
-    private static String getUniqueID(Context context) {
+    public static String getUniqueID(Context context) {
         String serialNum;
         try {
             Class<?> c = Class.forName("android.os.SystemProperties");
